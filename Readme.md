@@ -88,7 +88,7 @@ graph TD
 ## ⚙️ Step 4: Provisioning the Application Servers
 
 *   **Launch EC2 Instances:**
-    *   Launch two instances using the **Amazon Linux AMI**.
+    *   Launch two instances using the **Amazon Linux 2023 AMI**.
     *   Place one instance in the **Private Subnet** of AZ A, and the other in the **Private Subnet** of AZ B.
 *   **IAM Role:**
     *   Attach the `LabRole` profile (if required by AWS Academy) or an equivalent role.
@@ -106,8 +106,8 @@ graph TD
     ```bash
     #!/bin/bash
     # 1. System updates and required packages
-    sudo yum update -y
-    sudo yum install python3-pip git -y
+    sudo dnf update -y
+    sudo dnf install python3-pip git -y
     
     # 2. Prepare directory and fetch code
     cd /home/ec2-user
